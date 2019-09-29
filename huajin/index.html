@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <!--author：郑相翎 -->
+    <style type="text/css">
+        body,
+        html,
+        {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+        #allmap {
+            width: 70%;
+            height: 100%;
+            float: left;
+        }
+        #info {
+            width: 30%;
+            height: 100%;
+            float: right;
+        }
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=wp49MwWru1fgmETOs9f5LoXxsEm2kP6C"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>计算县到各乡镇的驾车最短距离</title>
+</head>
+
+<body>
+    <!-- 左边70%地图，右边30%数据 -->
+    <div id="allmap"></div>
+    <p>如无法运行右边部分请换用其他浏览器试试</p>
+    <div id="app">
+        <p>请输入需要查询的县</p>
+        <input type="text" class="search_value" v-model="search_val" @keyup.enter="getCName">
+        <input type="button" class="search_btn" value="查询" @click="getCName" />
+        <table>
+            <tr><th>最短时间及最短路程</th></tr>
+            <tr v-for="(d, index) in distanceList"><td>{{index+1}}）{{d}}</td></tr>
+        </table>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    // vue 走起
+    var app = new Vue({
+        el: '#app',
+        data: {
+            nameList: [],
+            distanceList: [],
+            allInfo: [],
+            search_val: '广西来宾市武宣县',
+        },
+        methods: {
+            // 获取输入县的所有乡镇
+            getCName: function () {
+                var vm = this;
+                $.ajax({
+                    type: 'get',
+                    url: 'http://api.map.baidu.com/place/v2/search?query=%E4%B9%A1%E9%95%87&region=' + vm.search_val + '&scope=2&city_limit=true&page_size=20&output=json&ak=wp49MwWru1fgmETOs9f5LoXxsEm2kP6C',
+                    dataType: 'jsonp',
+                    crossDomain: true,
+                    success: function (data) {
+                        var new_arr = [];
+                        // 过滤不是乡镇的数据
+                        var n = $.each(data.results, function (index, item) {
+                            if (item.name[item.name.length - 1] == '乡' || item.name[item.name.length - 1] == '镇') {
+                                new_arr.push(item.name)
+                            }
+                        });
+                        vm.nameList = new_arr;
+                        vm.distanceList = [];
+                        new_arr.map(function (e) {
+                            vm.getDistance(e)
+                        })
+                    }
+                });
+            },
+            // 获取县到乡镇的最短时间和最短距离
+            getDistance: function (end_name) {
+                var vm = this;
+                var output = "至" + end_name + "最短时间：";
+                var searchComplete = function (results) {
+                    if (transit.getStatus() != BMAP_STATUS_SUCCESS) {
+                        return;
+                    }
+                    var plan = results.getPlan(0);
+                    output += plan.getDuration(true) + "，";       //获取时间
+                    output += "最短路程：";
+                    output += plan.getDistance(true);             //获取距离
+                }
+                var transit = new BMap.DrivingRoute(vm.hjMap, {
+                    renderOptions: { map: vm.hjMap },
+                    onSearchComplete: searchComplete,
+                    onPolylinesSet: function () {
+                        vm.distanceList.push(output);
+                    },
+                    policy: BMAP_DRIVING_POLICY_LEAST_DISTANCE // 获取最短距离
+                });
+                transit.search(vm.search_val, vm.search_val + end_name);
+            }
+        },
+        // 初始化地图
+        created: function () {
+            var hjMap = new BMap.Map("allmap");
+            // 108.33, 22.84 为南宁市的经纬坐标
+            hjMap.centerAndZoom(new BMap.Point(108.33, 22.84), 12);
+            hjMap.enableScrollWheelZoom(true);
+            var navigationControl = new BMap.NavigationControl({
+                // 靠左上角位置
+                anchor: BMAP_ANCHOR_TOP_LEFT,
+                // LARGE类型
+                type: BMAP_NAVIGATION_CONTROL_LARGE,
+                // 启用显示定位
+                enableGeolocation: true
+            });
+            hjMap.addControl(navigationControl);
+            this.hjMap = hjMap;
+        }
+    })
+</script>

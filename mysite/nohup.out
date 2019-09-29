@@ -1,0 +1,431 @@
+[uWSGI] getting INI configuration from mysite_uwsgi.ini
+*** Starting uWSGI 2.0.15 (64bit) on [Thu Oct 26 20:38:39 2017] ***
+compiled with version: 4.8.4 on 26 October 2017 13:57:06
+os: Linux-3.13.0-128-generic #177-Ubuntu SMP Tue Aug 8 11:40:23 UTC 2017
+nodename: VM-121-44-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /data/www/vhosts/mysite
+writing pidfile to /data/www/vhosts/mysite/mysite.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/www/vhosts/mysite/
+your processes number limit is 14820
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /data/www/vhosts/mysite/socket.sock fd 3
+Python version: 3.6.2 (default, Sep  6 2017, 12:51:49)  [GCC 4.8.4]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x12d8660
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2255560 bytes (2202 KB) for 30 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x12d8660 pid: 3522 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3522)
+spawned uWSGI worker 1 (pid: 3524, cores: 1)
+spawned uWSGI worker 2 (pid: 3525, cores: 1)
+spawned uWSGI worker 3 (pid: 3526, cores: 1)
+spawned uWSGI worker 4 (pid: 3527, cores: 1)
+spawned uWSGI worker 5 (pid: 3528, cores: 1)
+spawned uWSGI worker 6 (pid: 3529, cores: 1)
+spawned uWSGI worker 7 (pid: 3530, cores: 1)
+spawned uWSGI worker 8 (pid: 3531, cores: 1)
+spawned uWSGI worker 9 (pid: 3532, cores: 1)
+spawned uWSGI worker 10 (pid: 3533, cores: 1)
+spawned uWSGI worker 11 (pid: 3534, cores: 1)
+spawned uWSGI worker 12 (pid: 3535, cores: 1)
+spawned uWSGI worker 13 (pid: 3536, cores: 1)
+spawned uWSGI worker 14 (pid: 3537, cores: 1)
+spawned uWSGI worker 15 (pid: 3538, cores: 1)
+spawned uWSGI worker 16 (pid: 3539, cores: 1)
+spawned uWSGI worker 17 (pid: 3540, cores: 1)
+spawned uWSGI worker 18 (pid: 3541, cores: 1)
+spawned uWSGI worker 19 (pid: 3542, cores: 1)
+spawned uWSGI worker 20 (pid: 3543, cores: 1)
+spawned uWSGI worker 21 (pid: 3544, cores: 1)
+spawned uWSGI worker 22 (pid: 3545, cores: 1)
+spawned uWSGI worker 23 (pid: 3546, cores: 1)
+spawned uWSGI worker 24 (pid: 3547, cores: 1)
+spawned uWSGI worker 25 (pid: 3548, cores: 1)
+spawned uWSGI worker 26 (pid: 3549, cores: 1)
+spawned uWSGI worker 27 (pid: 3550, cores: 1)
+spawned uWSGI worker 28 (pid: 3551, cores: 1)
+spawned uWSGI worker 29 (pid: 3552, cores: 1)
+spawned uWSGI worker 30 (pid: 3553, cores: 1)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 3524)...
+Gracefully killing worker 2 (pid: 3525)...
+Gracefully killing worker 30 (pid: 3553)...
+Gracefully killing worker 29 (pid: 3552)...
+Gracefully killing worker 28 (pid: 3551)...
+Gracefully killing worker 26 (pid: 3549)...
+Gracefully killing worker 25 (pid: 3548)...
+Gracefully killing worker 24 (pid: 3547)...
+Gracefully killing worker 23 (pid: 3546)...
+Gracefully killing worker 22 (pid: 3545)...
+Gracefully killing worker 3 (pid: 3526)...
+Gracefully killing worker 4 (pid: 3527)...
+Gracefully killing worker 15 (pid: 3538)...
+Gracefully killing worker 5 (pid: 3528)...
+Gracefully killing worker 11 (pid: 3534)...
+Gracefully killing worker 6 (pid: 3529)...
+Gracefully killing worker 27 (pid: 3550)...
+Gracefully killing worker 7 (pid: 3530)...
+Gracefully killing worker 8 (pid: 3531)...
+Gracefully killing worker 9 (pid: 3532)...
+Gracefully killing worker 10 (pid: 3533)...
+Gracefully killing worker 12 (pid: 3535)...
+Gracefully killing worker 13 (pid: 3536)...
+Gracefully killing worker 14 (pid: 3537)...
+Gracefully killing worker 16 (pid: 3539)...
+Gracefully killing worker 17 (pid: 3540)...
+Gracefully killing worker 18 (pid: 3541)...
+Gracefully killing worker 19 (pid: 3542)...
+Gracefully killing worker 20 (pid: 3543)...
+Gracefully killing worker 21 (pid: 3544)...
+worker 1 buried after 2 seconds
+worker 2 buried after 2 seconds
+worker 3 buried after 2 seconds
+worker 4 buried after 2 seconds
+worker 5 buried after 2 seconds
+worker 6 buried after 2 seconds
+worker 7 buried after 2 seconds
+worker 8 buried after 2 seconds
+worker 9 buried after 2 seconds
+worker 10 buried after 2 seconds
+worker 11 buried after 2 seconds
+worker 12 buried after 2 seconds
+worker 13 buried after 2 seconds
+worker 14 buried after 2 seconds
+worker 15 buried after 2 seconds
+worker 16 buried after 2 seconds
+worker 17 buried after 2 seconds
+worker 18 buried after 2 seconds
+worker 19 buried after 2 seconds
+worker 20 buried after 2 seconds
+worker 21 buried after 2 seconds
+worker 22 buried after 2 seconds
+worker 23 buried after 2 seconds
+worker 24 buried after 2 seconds
+worker 25 buried after 2 seconds
+worker 26 buried after 2 seconds
+worker 27 buried after 2 seconds
+worker 28 buried after 2 seconds
+worker 29 buried after 2 seconds
+worker 30 buried after 2 seconds
+binary reloading uWSGI...
+chdir() to /data/www/vhosts/mysite
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/data/www/vhosts/mysite/socket.sock)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from mysite_uwsgi.ini
+*** Starting uWSGI 2.0.15 (64bit) on [Thu Oct 26 12:39:01 2017] ***
+compiled with version: 4.8.4 on 26 October 2017 13:57:06
+os: Linux-3.13.0-128-generic #177-Ubuntu SMP Tue Aug 8 11:40:23 UTC 2017
+nodename: VM-121-44-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /data/www/vhosts/mysite
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/www/vhosts/mysite/
+your processes number limit is 14820
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /data/www/vhosts/mysite/socket.sock fd 3
+Python version: 3.6.2 (default, Sep  6 2017, 12:51:49)  [GCC 4.8.4]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x201c480
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2255560 bytes (2202 KB) for 30 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x201c480 pid: 3522 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 3522)
+spawned uWSGI worker 1 (pid: 3623, cores: 1)
+spawned uWSGI worker 2 (pid: 3624, cores: 1)
+spawned uWSGI worker 3 (pid: 3625, cores: 1)
+spawned uWSGI worker 4 (pid: 3626, cores: 1)
+spawned uWSGI worker 5 (pid: 3627, cores: 1)
+spawned uWSGI worker 6 (pid: 3628, cores: 1)
+spawned uWSGI worker 7 (pid: 3629, cores: 1)
+spawned uWSGI worker 8 (pid: 3630, cores: 1)
+spawned uWSGI worker 9 (pid: 3631, cores: 1)
+spawned uWSGI worker 10 (pid: 3632, cores: 1)
+spawned uWSGI worker 11 (pid: 3633, cores: 1)
+spawned uWSGI worker 12 (pid: 3634, cores: 1)
+spawned uWSGI worker 13 (pid: 3635, cores: 1)
+spawned uWSGI worker 14 (pid: 3636, cores: 1)
+spawned uWSGI worker 15 (pid: 3637, cores: 1)
+spawned uWSGI worker 16 (pid: 3638, cores: 1)
+spawned uWSGI worker 17 (pid: 3639, cores: 1)
+spawned uWSGI worker 18 (pid: 3640, cores: 1)
+spawned uWSGI worker 19 (pid: 3641, cores: 1)
+spawned uWSGI worker 20 (pid: 3642, cores: 1)
+spawned uWSGI worker 21 (pid: 3643, cores: 1)
+spawned uWSGI worker 22 (pid: 3644, cores: 1)
+spawned uWSGI worker 23 (pid: 3645, cores: 1)
+spawned uWSGI worker 24 (pid: 3646, cores: 1)
+spawned uWSGI worker 25 (pid: 3647, cores: 1)
+spawned uWSGI worker 26 (pid: 3648, cores: 1)
+spawned uWSGI worker 27 (pid: 3649, cores: 1)
+spawned uWSGI worker 28 (pid: 3650, cores: 1)
+spawned uWSGI worker 29 (pid: 3651, cores: 1)
+spawned uWSGI worker 30 (pid: 3652, cores: 1)
+Gracefully killing worker 30 (pid: 3652)...
+Gracefully killing worker 1 (pid: 3623)...
+Gracefully killing worker 2 (pid: 3624)...
+Gracefully killing worker 3 (pid: 3625)...
+Gracefully killing worker 4 (pid: 3626)...
+Gracefully killing worker 5 (pid: 3627)...
+Gracefully killing worker 6 (pid: 3628)...
+Gracefully killing worker 8 (pid: 3630)...
+Gracefully killing worker 9 (pid: 3631)...
+Gracefully killing worker 10 (pid: 3632)...
+Gracefully killing worker 11 (pid: 3633)...
+Gracefully killing worker 12 (pid: 3634)...
+Gracefully killing worker 13 (pid: 3635)...
+Gracefully killing worker 14 (pid: 3636)...
+Gracefully killing worker 15 (pid: 3637)...
+Gracefully killing worker 16 (pid: 3638)...
+Gracefully killing worker 17 (pid: 3639)...
+Gracefully killing worker 18 (pid: 3640)...
+Gracefully killing worker 19 (pid: 3641)...
+Gracefully killing worker 20 (pid: 3642)...
+Gracefully killing worker 21 (pid: 3643)...
+Gracefully killing worker 22 (pid: 3644)...
+Gracefully killing worker 23 (pid: 3645)...
+Gracefully killing worker 24 (pid: 3646)...
+Gracefully killing worker 25 (pid: 3647)...
+Gracefully killing worker 26 (pid: 3648)...
+Gracefully killing worker 27 (pid: 3649)...
+Gracefully killing worker 29 (pid: 3651)...
+...gracefully killing workers...
+Gracefully killing worker 28 (pid: 3650)...
+Gracefully killing worker 7 (pid: 3629)...
+worker 30 buried after 0 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+worker 6 buried after 1 seconds
+worker 7 buried after 1 seconds
+worker 19 buried after 1 seconds
+worker 20 buried after 1 seconds
+worker 21 buried after 1 seconds
+worker 22 buried after 1 seconds
+worker 23 buried after 1 seconds
+worker 24 buried after 1 seconds
+worker 25 buried after 1 seconds
+worker 28 buried after 1 seconds
+worker 29 buried after 1 seconds
+worker 1 buried after 2 seconds
+worker 2 buried after 2 seconds
+worker 8 buried after 2 seconds
+worker 9 buried after 2 seconds
+worker 10 buried after 2 seconds
+worker 11 buried after 2 seconds
+worker 12 buried after 2 seconds
+worker 13 buried after 2 seconds
+worker 14 buried after 2 seconds
+worker 15 buried after 2 seconds
+worker 16 buried after 2 seconds
+worker 17 buried after 2 seconds
+worker 18 buried after 2 seconds
+worker 26 buried after 2 seconds
+worker 27 buried after 2 seconds
+binary reloading uWSGI...
+chdir() to /data/www/vhosts/mysite
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/data/www/vhosts/mysite/socket.sock)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from mysite_uwsgi.ini
+*** Starting uWSGI 2.0.15 (64bit) on [Thu Oct 26 12:43:00 2017] ***
+compiled with version: 4.8.4 on 26 October 2017 13:57:06
+os: Linux-3.13.0-128-generic #177-Ubuntu SMP Tue Aug 8 11:40:23 UTC 2017
+nodename: VM-121-44-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /data/www/vhosts/mysite
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/www/vhosts/mysite/
+your processes number limit is 14820
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /data/www/vhosts/mysite/socket.sock fd 3
+Python version: 3.6.2 (default, Sep  6 2017, 12:51:49)  [GCC 4.8.4]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1015480
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2255560 bytes (2202 KB) for 30 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1015480 pid: 3522 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 3522)
+spawned uWSGI worker 1 (pid: 4099, cores: 1)
+spawned uWSGI worker 2 (pid: 4100, cores: 1)
+spawned uWSGI worker 3 (pid: 4101, cores: 1)
+spawned uWSGI worker 4 (pid: 4102, cores: 1)
+spawned uWSGI worker 5 (pid: 4103, cores: 1)
+spawned uWSGI worker 6 (pid: 4104, cores: 1)
+spawned uWSGI worker 7 (pid: 4105, cores: 1)
+spawned uWSGI worker 8 (pid: 4106, cores: 1)
+spawned uWSGI worker 9 (pid: 4107, cores: 1)
+spawned uWSGI worker 10 (pid: 4108, cores: 1)
+spawned uWSGI worker 11 (pid: 4109, cores: 1)
+spawned uWSGI worker 12 (pid: 4110, cores: 1)
+spawned uWSGI worker 13 (pid: 4111, cores: 1)
+spawned uWSGI worker 14 (pid: 4112, cores: 1)
+spawned uWSGI worker 15 (pid: 4113, cores: 1)
+spawned uWSGI worker 16 (pid: 4114, cores: 1)
+spawned uWSGI worker 17 (pid: 4115, cores: 1)
+spawned uWSGI worker 18 (pid: 4116, cores: 1)
+spawned uWSGI worker 19 (pid: 4117, cores: 1)
+spawned uWSGI worker 20 (pid: 4118, cores: 1)
+spawned uWSGI worker 21 (pid: 4119, cores: 1)
+spawned uWSGI worker 22 (pid: 4120, cores: 1)
+spawned uWSGI worker 23 (pid: 4121, cores: 1)
+spawned uWSGI worker 24 (pid: 4122, cores: 1)
+spawned uWSGI worker 25 (pid: 4123, cores: 1)
+spawned uWSGI worker 26 (pid: 4124, cores: 1)
+spawned uWSGI worker 27 (pid: 4125, cores: 1)
+spawned uWSGI worker 28 (pid: 4126, cores: 1)
+spawned uWSGI worker 29 (pid: 4127, cores: 1)
+spawned uWSGI worker 30 (pid: 4128, cores: 1)
+[pid: 4107|app: 0|req: 1/1] 113.12.103.102 () {44 vars in 824 bytes} [Thu Oct 26 12:43:45 2017] GET / => generated 1716 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+[pid: 4123|app: 0|req: 1/2] 113.12.103.102 () {42 vars in 805 bytes} [Thu Oct 26 12:49:13 2017] GET /admin/ => generated 0 bytes in 21 msecs (HTTP/1.1 302) 7 headers in 265 bytes (1 switches on core 0)
+[pid: 4099|app: 0|req: 1/3] 113.12.103.102 () {42 vars in 842 bytes} [Thu Oct 26 12:49:13 2017] GET /admin/login/?next=/admin/ => generated 1650 bytes in 50 msecs (HTTP/1.1 200) 7 headers in 381 bytes (1 switches on core 0)
+[pid: 4116|app: 0|req: 1/4] 113.12.103.102 () {42 vars in 786 bytes} [Thu Oct 26 12:54:04 2017] GET / => generated 1716 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+[pid: 4102|app: 0|req: 1/5] 113.12.103.102 () {42 vars in 793 bytes} [Thu Oct 26 12:54:32 2017] GET / => generated 1716 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+[pid: 4102|app: 0|req: 2/6] 180.163.8.254 () {26 vars in 284 bytes} [Thu Oct 26 16:57:13 2017] GET / => generated 1716 bytes in 1 msecs (HTTP/1.0 200) 3 headers in 95 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '10.177.152.217'. You may need to add '10.177.152.217' to ALLOWED_HOSTS.
+[pid: 4116|app: 0|req: 2/7] 219.133.49.231 () {36 vars in 449 bytes} [Thu Oct 26 17:07:03 2017] GET /proxy.html => generated 55480 bytes in 42 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '111.231.11.85:8000'. You may need to add '111.231.11.85' to ALLOWED_HOSTS.
+[pid: 4107|app: 0|req: 2/8] 114.215.45.101 () {32 vars in 372 bytes} [Thu Oct 26 17:24:58 2017] GET / => generated 55125 bytes in 32 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'www.qq.com'. You may need to add 'www.qq.com' to ALLOWED_HOSTS.
+[pid: 4126|app: 0|req: 1/9] 120.132.3.151 () {34 vars in 516 bytes} [Thu Oct 26 20:31:47 2017] GET /404/search_children.js => generated 55519 bytes in 38 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 4107|app: 0|req: 3/10] 183.61.47.108 () {26 vars in 284 bytes} [Thu Oct 26 22:43:55 2017] GET / => generated 1716 bytes in 1 msecs (HTTP/1.0 200) 3 headers in 95 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '10.177.152.217'. You may need to add '10.177.152.217' to ALLOWED_HOSTS.
+[pid: 4107|app: 0|req: 4/11] 219.133.49.231 () {36 vars in 449 bytes} [Thu Oct 26 23:06:48 2017] GET /proxy.html => generated 55480 bytes in 39 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+Invalid HTTP_HOST header: '111.231.107.16:8000'. You may need to add '111.231.107.16' to ALLOWED_HOSTS.
+[pid: 4107|app: 0|req: 5/12] 114.215.45.101 () {32 vars in 373 bytes} [Fri Oct 27 01:23:06 2017] GET / => generated 55140 bytes in 30 msecs (HTTP/1.1 400) 1 headers in 53 bytes (2 switches on core 0)
+[pid: 4107|app: 0|req: 6/13] 180.163.8.254 () {26 vars in 284 bytes} [Fri Oct 27 03:10:39 2017] GET / => generated 1716 bytes in 1 msecs (HTTP/1.0 200) 3 headers in 95 bytes (2 switches on core 0)
+Invalid HTTP_HOST header: '10.177.152.217'. You may need to add '10.177.152.217' to ALLOWED_HOSTS.
+[pid: 4099|app: 0|req: 2/14] 219.133.49.231 () {36 vars in 449 bytes} [Fri Oct 27 04:06:13 2017] GET /proxy.html => generated 55480 bytes in 32 msecs (HTTP/1.1 400) 1 headers in 53 bytes (1 switches on core 0)
+[pid: 4116|app: 0|req: 3/15] 139.162.79.87 () {34 vars in 398 bytes} [Fri Oct 27 05:00:10 2017] GET / => generated 1716 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+[pid: 4099|app: 0|req: 3/16] 113.12.103.102 () {44 vars in 824 bytes} [Fri Oct 27 06:13:05 2017] GET / => generated 1716 bytes in 1 msecs (HTTP/1.1 200) 3 headers in 95 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 2 seconds
+worker 2 buried after 2 seconds
+worker 3 buried after 2 seconds
+worker 4 buried after 2 seconds
+worker 5 buried after 2 seconds
+worker 6 buried after 2 seconds
+worker 7 buried after 2 seconds
+worker 8 buried after 2 seconds
+worker 9 buried after 2 seconds
+worker 10 buried after 2 seconds
+worker 11 buried after 2 seconds
+worker 12 buried after 2 seconds
+worker 13 buried after 2 seconds
+worker 14 buried after 2 seconds
+worker 15 buried after 2 seconds
+worker 16 buried after 2 seconds
+worker 17 buried after 2 seconds
+worker 18 buried after 2 seconds
+worker 19 buried after 2 seconds
+worker 20 buried after 2 seconds
+worker 21 buried after 2 seconds
+worker 22 buried after 2 seconds
+worker 23 buried after 2 seconds
+worker 24 buried after 2 seconds
+worker 25 buried after 2 seconds
+worker 26 buried after 2 seconds
+worker 27 buried after 2 seconds
+worker 28 buried after 2 seconds
+worker 29 buried after 2 seconds
+worker 30 buried after 2 seconds
+binary reloading uWSGI...
+chdir() to /data/www/vhosts/mysite
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (/data/www/vhosts/mysite/socket.sock)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from mysite_uwsgi.ini
+*** Starting uWSGI 2.0.15 (64bit) on [Fri Aug 16 12:01:06 2019] ***
+compiled with version: 4.8.4 on 26 October 2017 13:57:06
+os: Linux-3.13.0-128-generic #177-Ubuntu SMP Tue Aug 8 11:40:23 UTC 2017
+nodename: VM-121-44-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 2
+current working directory: /data/www/vhosts/mysite
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /data/www/vhosts/mysite/
+your processes number limit is 14820
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /data/www/vhosts/mysite/socket.sock fd 3
+Python version: 3.6.2 (default, Sep  6 2017, 12:51:49)  [GCC 4.8.4]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1f11480
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2255560 bytes (2202 KB) for 30 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x1f11480 pid: 3522 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 3522)
+spawned uWSGI worker 1 (pid: 701, cores: 1)
+spawned uWSGI worker 2 (pid: 702, cores: 1)
+spawned uWSGI worker 3 (pid: 703, cores: 1)
+spawned uWSGI worker 4 (pid: 704, cores: 1)
+spawned uWSGI worker 5 (pid: 705, cores: 1)
+spawned uWSGI worker 6 (pid: 706, cores: 1)
+spawned uWSGI worker 7 (pid: 707, cores: 1)
+spawned uWSGI worker 8 (pid: 708, cores: 1)
+spawned uWSGI worker 9 (pid: 709, cores: 1)
+spawned uWSGI worker 10 (pid: 710, cores: 1)
+spawned uWSGI worker 11 (pid: 711, cores: 1)
+spawned uWSGI worker 12 (pid: 712, cores: 1)
+spawned uWSGI worker 13 (pid: 713, cores: 1)
+spawned uWSGI worker 14 (pid: 714, cores: 1)
+spawned uWSGI worker 15 (pid: 715, cores: 1)
+spawned uWSGI worker 16 (pid: 716, cores: 1)
+spawned uWSGI worker 17 (pid: 717, cores: 1)
+spawned uWSGI worker 18 (pid: 718, cores: 1)
+spawned uWSGI worker 19 (pid: 719, cores: 1)
+spawned uWSGI worker 20 (pid: 720, cores: 1)
+spawned uWSGI worker 21 (pid: 721, cores: 1)
+spawned uWSGI worker 22 (pid: 722, cores: 1)
+spawned uWSGI worker 23 (pid: 723, cores: 1)
+spawned uWSGI worker 24 (pid: 724, cores: 1)
+spawned uWSGI worker 25 (pid: 725, cores: 1)
+spawned uWSGI worker 26 (pid: 726, cores: 1)
+spawned uWSGI worker 27 (pid: 727, cores: 1)
+spawned uWSGI worker 28 (pid: 728, cores: 1)
+spawned uWSGI worker 29 (pid: 729, cores: 1)
+spawned uWSGI worker 30 (pid: 730, cores: 1)
